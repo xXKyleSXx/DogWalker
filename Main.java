@@ -1,0 +1,15 @@
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+
+public class Main {
+    public static void main(String[] args) throws FileNotFoundException{
+        File f = new File("companies.txt");
+        Scanner s = new Scanner(f);
+        DogWalkCompany[] companies = new DogWalkCompany[100];
+        for (int i = 0; i < 100; i++) {
+            companies[i] = new DogWalkCompany(s.nextLine());
+        }
+    }
+
+}
