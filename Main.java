@@ -14,6 +14,7 @@ public class Main {
         //for (int i = 0; i < 100; i++) {
             f = new File("walkers.txt");
             s = new Scanner(f);
+            int total =  0;        
         while (s.hasNextLine()) {
             int company = s.nextInt();
             int maxDogs = s.nextInt();
@@ -22,7 +23,9 @@ public class Main {
             //System.out.println(s.nextInt());
             DogWalker walker = new DogWalker(maxDogs, companies[company]);
             int pay = walker.dogWalkShift(startHour, endHour);
-            System.out.println(pay);       
+            //System.out.println(pay);
+            total = total + pay;
+            System.out.println("Total is " + total);
         //}
         //I've spent 2 hours trying to make one loop
         }
