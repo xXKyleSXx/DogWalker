@@ -11,24 +11,25 @@ public class Main {
         for (int i = 0; i < 100; i++) {
             companies[i] = new DogWalkCompany(s.nextLine());
         }
-        //for (int i = 0; i < 100; i++) {
-            f = new File("walkers.txt");
-            s = new Scanner(f);
-            int total =  0;        
+        // for (int i = 0; i < 100; i++) {
+        f = new File("walkers.txt");
+        s = new Scanner(f);
+        int total = 0;
         while (s.hasNextLine()) {
             int company = s.nextInt();
             int maxDogs = s.nextInt();
             int startHour = s.nextInt();
             int endHour = s.nextInt();
-            //System.out.println(s.nextInt());
+            // System.out.println(s.nextInt());
             DogWalker walker = new DogWalker(maxDogs, companies[company]);
             int pay = walker.dogWalkShift(startHour, endHour);
-            //System.out.println(pay);
+            // System.out.println(pay);
             total = total + pay;
-            System.out.println("Total is " + total);
-        //}
-        //I've spent 2 hours trying to make one loop
+           
+            // }
+            // I've spent 2 hours trying to make one loop
         }
+         System.out.println("Total is " + total);
         s.close();
     }
 }
